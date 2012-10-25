@@ -31,7 +31,7 @@ urlpatterns = patterns('django_pbs.servers.views',
 
 urlpatterns += patterns('django_pbs.jobs.views',
 
-    url(r'^jobs/(?P<job_id>[-.\w]+)/$', 'job_detail', name='pbs_job_detail'),
+    url(r'^jobs/(?P<job_id>[-.\w\[\]]+)/$', 'job_detail', name='pbs_job_detail'),
 )
 
 urlpatterns += patterns('django_pbs.users.views',
