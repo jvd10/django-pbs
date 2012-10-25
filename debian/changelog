@@ -1,3 +1,9 @@
+django-pbs (1.2.1-1) stable; urgency=low
+
+  * Update allowed job_id characters to include [ and ].
+
+ -- Brian May <bam@debian.org>  Thu, 25 Oct 2012 14:59:19 +1100
+
 django-pbs (1.2-1) stable; urgency=low
 
   * Use newer pbs_python interface
