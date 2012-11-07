@@ -2,9 +2,12 @@
 
 {% block title %}Servers{% endblock %}
 
-{% block bread_crumbs_1 %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href='{{ base_url|default:"/" }}'>Home</a>
  &rsaquo; <a href="../../">Servers</a>
  &rsaquo; {{ username }}
+</div>
 {% endblock %}   
  
 {% block content %}
