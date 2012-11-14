@@ -28,4 +28,4 @@ def job_table(job_list, type):
     if type == 'Running':      
         running = True   
 
-    return {'job_list': job_list, 'running': running, 'MEDIA_URL': settings.MEDIA_URL }
+    return {'job_list': job_list, 'running': running, 'STATIC_URL': settings.STATIC_URL }
