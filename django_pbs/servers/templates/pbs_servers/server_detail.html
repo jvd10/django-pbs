@@ -1,4 +1,5 @@
 {% extends "main.html" %}
+{% load url from future %}
 
 {% block title %}Servers{% endblock %}
 
@@ -17,7 +18,7 @@
    	<h2>Servers</h2>
    	<h3>{{ server }}</h3>
    	<table>
-   	   <tr><td colspan="2"><a href="{% url pbs_node_list server.name %}">Nodes</a>   <a href="{% url pbs_queue_list server.name %}">Queues</a></td></tr>
+   	   <tr><td colspan="2"><a href="{% url "pbs_node_list" server.name %}">Nodes</a>   <a href="{% url "pbs_queue_list" server.name %}">Queues</a></td></tr>
    		<tr><td>Total jobs:</td><td>{{ server.total_jobs }}</td></tr>
    		<tr><td>State count::</td><td>{{ server.state_count }}</td></tr>
    		<tr><td>Default queue:</td><td>{{ server.default_queue }}</td></tr>
