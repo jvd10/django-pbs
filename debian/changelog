@@ -1,3 +1,17 @@
+django-pbs (1.2.3-1) stable; urgency=low
+
+  * Support Django 1.4 and Django 1.5
+  * Support Karaage 2.7.0 templates.
+  * Templates now require latest karaage and related packages.
+
+ -- Brian May <bam@debian.org>  Mon, 11 Feb 2013 11:18:26 +1100
+
+django-pbs (1.2.2-1) stable; urgency=low
+
+  * Use staticfiles for img/bar.gif.
+
+ -- Brian May <bam@debian.org>  Wed, 14 Nov 2012 13:21:43 +1100
+
 django-pbs (1.2.1-1) stable; urgency=low
 
   * Update allowed job_id characters to include [ and ].
