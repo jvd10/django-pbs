@@ -31,7 +31,7 @@
 	   		<td>{{ j.Job_Name }}</td>
 	   		<td><a href="{% url "pbs_user_detail" j.username %}">{{ j.username }}</a></td>
 	   		<td>{{ j.submission_host }}</td>
-	   		<td><a href="{% url "pbs_queue_detail" j.server.name,j.queue %}">{{ j.queue }}</a></td>
+	   		<td><a href="{% url "pbs_queue_detail" j.server.name j.queue %}">{{ j.queue }}</a></td>
 	   		<td class="right">{{ j.est_walltime }}</td>
 	   		{% if running %}
 	   			<td>{{ j.cpus_used }}</td>

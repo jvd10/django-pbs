@@ -30,7 +30,7 @@
    	<tbody>
    	{% for q in server.queue_list|dictsort:"name" %}
 	   	<tr class="{% cycle row1,row2 %}">
-	   		<td><a href="{% url "pbs_queue_detail" server.name,q.name %}">{{ q }}</a></td>
+	   		<td><a href="{% url "pbs_queue_detail" server.name q.name %}">{{ q }}</a></td>
 	   		<td>{{ q.total_jobs }}</td>
 	   		<td>{{ q.resources_default_walltime }}</td>
 	   		<td>{{ q.resources_max_walltime }}</td>
