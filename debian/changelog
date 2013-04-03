@@ -1,3 +1,9 @@
+django-pbs (1.2.4-1) stable; urgency=low
+
+  * Fix URL syntax errors in Django 1.4
+
+ -- Brian May <bam@debian.org>  Thu, 04 Apr 2013 10:39:45 +1100
+
 django-pbs (1.2.3-1) stable; urgency=low
 
   * Support Django 1.4 and Django 1.5
