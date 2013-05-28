@@ -1,3 +1,9 @@
+django-pbs (1.2.5-1) unstable; urgency=low
+
+  * Update Debian packaging.
+
+ -- Brian May <bam@debian.org>  Tue, 28 May 2013 16:38:40 +1000
+
 django-pbs (1.2.4-1) stable; urgency=low
 
   * Fix URL syntax errors in Django 1.4
