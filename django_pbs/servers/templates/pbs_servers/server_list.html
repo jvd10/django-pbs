@@ -3,10 +3,10 @@
 
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-<a href='{{ base_url|default:"/" }}'>Home</a>
- &rsaquo; Servers
+    <a href='{% url "index" %}'>Home</a>&nbsp;›
+    Servers
 </div>
-{% endblock %}   
+{% endblock %}
 
 {% block content %}
 <div id="content-main">
