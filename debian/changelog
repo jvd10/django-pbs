@@ -1,3 +1,11 @@
+django-pbs (1.2.6-1) unstable; urgency=low
+
+  * Update breadcrumbs.
+  * Fix URL syntax error.
+  * Specify default values if error.
+
+ -- Brian May <bam@debian.org>  Tue, 17 Dec 2013 08:55:03 +1100
+
 django-pbs (1.2.5-1) unstable; urgency=low
 
   * Update Debian packaging.
