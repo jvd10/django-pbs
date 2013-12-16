@@ -87,14 +87,14 @@ class Job(object):
         try:
             self.count = self.Resource_List_nodes
         except:
-            pass
+            self.count = 0
         self.mtime = datetime.datetime.fromtimestamp(int(self.mtime))
         self.qtime = datetime.datetime.fromtimestamp(int(self.qtime))
         self.ctime = datetime.datetime.fromtimestamp(int(self.ctime))
         try:
             self.cpus_used = self.Resource_List_nodect
         except:
-            pass
+            self.cpus_used = 0
 
         try:
             self.etime = datetime.datetime.fromtimestamp(int(self.etime))
@@ -106,7 +106,8 @@ class Job(object):
             self.act_walltime = self.resources_used_walltime
             self.running_time = get_in_seconds(self.act_walltime)
         except:
-            pass
+            self.act_walltime = "00:00:00"
+            self.running_time = 0
         try:
             self.submission_host = self.Output_Path.split(':')[0]
         except:
