@@ -1,20 +1,22 @@
 {% extends "main.html" %}
 {% load url from future %}
 
+
 {% block title %}Servers{% endblock %}
+
 
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-<a href='{{ base_url|default:"/" }}'>Home</a>
- &rsaquo; <a href="../../../">Servers</a>
- &rsaquo; <a href="../../">{{ server }}</a>
- &rsaquo; {{ job }}
+    <a href='{% url "kg_admin_index" %}'>Home</a>&nbsp;›
+    <a href='{% url "pbs_server_list" %}'>Servers</a>&nbsp;›
+    <a href='{% url "pbs_server_detail" job.server.name %}'>{{ job.server }}</a>&nbsp;›
+    {{ job }}
 </div>
-{% endblock %}   
- 
+{% endblock %}
+
+
 {% block content %}
 {% load filters %}
-
 <div id="content-main">
 	<div class="module">
    	<h2>Servers</h2>
@@ -37,8 +39,6 @@
    		<tr><td>Error path:</td><td>{{ job.Error_Path }}</td></tr>
 			<tr><td>Nodes:</td><td>{% for n in job.node_list %}{{ n }} , {% endfor %}</td></tr>
 		</table>
-
 	</div>
-
 </div>
 {% endblock %}

@@ -1,16 +1,17 @@
 {% extends "main.html" %}
 {% load url from future %}
 
+
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-    <a href='{% url "index" %}'>Home</a>&nbsp;›
+    <a href='{% url "kg_admin_index" %}'>Home</a>&nbsp;›
     Servers
 </div>
 {% endblock %}
 
+
 {% block content %}
 <div id="content-main">
-
 	<div class="module">
    	<h2>Servers</h2>
    	<ul>

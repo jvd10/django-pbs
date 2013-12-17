@@ -1,18 +1,20 @@
 {% extends "main.html" %}
 {% load url from future %}
 
+
 {% block title %}Servers{% endblock %}
+
 
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-    <a href='{% url "index" %}'>Home</a>&nbsp;›
+    <a href='{% url "kg_admin_index" %}'>Home</a>&nbsp;›
     <a href='{% url "pbs_server_list" %}'>Servers</a>&nbsp;›
     {{ server }}
 </div>
-{% endblock %}   
- 
-{% block content %}
+{% endblock %}
 
+
+{% block content %}
 <div id="content-main">
 	<div class="module">
    	<h2>Servers</h2>
@@ -25,17 +27,13 @@
    		<tr><td>PBS version:</td><td>{{ server.pbs_version }}</td></tr>
    		<tr><td colspan="2">{{ c_used }} of {{ c_total }} processors in use ({{ c_percent|floatformat:"2" }}%)</td></tr>
 		</table>
-
 	</div>
-	
 {% regroup server.job_list|dictsortreversed:"state" by state as state_list %}
-
 {% load pbs_tables %}
 {% for state in state_list %}
 <div class="module">
 <h2>{{ state.grouper }}</h2>
 	{% job_table state.list state.grouper %}
-
 </div>
 {% endfor %}
 </div>

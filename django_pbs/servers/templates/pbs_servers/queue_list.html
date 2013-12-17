@@ -1,21 +1,22 @@
 {% extends "main.html" %}
 {% load url from future %}
 
+
 {% block title %}Servers{% endblock %}
+
 
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-    <a href='{% url "index" %}'>Home</a>&nbsp;›
+    <a href='{% url "kg_admin_index" %}'>Home</a>&nbsp;›
     <a href='{% url "pbs_server_list" %}'>Servers</a>&nbsp;›
-    <a href='{% url "pbs_server_detail" server.pk %}'>{{ server }}</a>&nbsp;›
+    <a href='{% url "pbs_server_detail" server.name %}'>{{ server }}</a>&nbsp;›
     Queues
 </div>
-{% endblock %}   
- 
-{% block content %}
+{% endblock %}
 
+
+{% block content %}
 <div id="content-main">
-	
 <div class="module">
 <h2>{{ server }}</h2>
 		<table cellspacing="0">
@@ -38,7 +39,6 @@
 	   {% endfor %}
    	</tbody>  	
 		</table>	
-
 </div>
 </div>
 {% endblock %}
