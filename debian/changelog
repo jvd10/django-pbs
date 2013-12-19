@@ -1,3 +1,9 @@
+django-pbs (1.2.7-1) unstable; urgency=low
+
+  * Fix breadcrumbs. Works with Karaage2 only.
+
+ -- Brian May <bam@debian.org>  Thu, 19 Dec 2013 13:40:00 +1100
+
 django-pbs (1.2.6-1) unstable; urgency=low
 
   * Update breadcrumbs.
