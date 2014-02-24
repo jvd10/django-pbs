@@ -27,12 +27,7 @@ ADMINS = (
 
 # A list of all PBS servers to list on the server list page
 # also used when finding all jobs for a specific user.
-LOCAL_PBS_SERVERS = ['brecca-m.vpac.org', 
-                     'tango-m.vpac.org',
-                     'edda-m.vpac.org',
-                     'wexstan.vpac.org',
-                     'wem-mgt.vpac.org',
-                     'karros-m.vpac.org',]
+LOCAL_PBS_SERVERS = ['trifid-m.vpac.org', 'trifid-m.vpac.org']
 
 
 # Local time zone for this installation. Choices can be found here:
@@ -46,64 +41,41 @@ TIME_ZONE = 'Australia/Melbourne'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-au'
 
-
-MANAGERS = ADMINS
-
-PROJECT_DIR = os_path.abspath(os_path.split(__file__)[0])
-BASE_URL = ''
-
-
-
-SITE_ID = 1
-
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = False
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os_path.join(PROJECT_DIR, 'media')
+STATIC_ROOT = "/var/lib/django-pbs/static"
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/pbs_media/'
-
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+STATIC_URL = '/pbs_media/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '87zm7t34p6!^c--!3sii8j9u-@2_xd5q-bv-k0k@%pv6=82w9-'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.doc.XViewMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    #'django.core.context_processors.debug',
-    'django.core.context_processors.media',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.static',
 )
-
 
 ROOT_URLCONF = 'django_pbs.urls'
 
-TEMPLATE_DIRS = (
-    os_path.join(PROJECT_DIR, 'templates')
-)
-
-
 INSTALLED_APPS = (
-    'django_common',
-    'django_common.layout',
+    'django.contrib.staticfiles',
     'django_pbs.servers',
     'django_pbs.moab',
     'django_pbs',
