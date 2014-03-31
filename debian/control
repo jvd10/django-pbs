@@ -8,7 +8,7 @@ Standards-Version: 3.9.3
 
 Package: django-pbs
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python-django (>= 0.96), pbs-python (>= 4.3), torque-client (>=2.4.8)
+Depends: ${misc:Depends}, ${python:Depends}, python-django (>= 1.6), pbs-python (>= 4.3), torque-client (>=2.4.8)
 Breaks: karaage (<< 3.0.1), karaage-admin (<< 3.0.1), karaage-registration (<< 1.1.0)
 Description: PBS information
  Provides views for displaying information from a PBS server.  pbs_python is

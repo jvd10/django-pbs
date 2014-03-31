@@ -71,6 +71,7 @@ setup(
         '': [ '*.css', '*.html', '*.js', '*.png', '*.gif', '*.map', '*.txt' ],
     },
     install_requires=[
-        'pbs_python',
+        "Django >= 1.6",
+        'pbs_python >= 4.3',
     ],
 )
