@@ -1,7 +1,4 @@
-include README
-include AUTHORS
-include COPYING
-include INSTALL
+include *.txt
+include *.rst
 include MANIFEST.in
-recursive-include django_pbs/templates *
-recursive-include django_pbs/servers/templates *
+recursive-include django_pbs *

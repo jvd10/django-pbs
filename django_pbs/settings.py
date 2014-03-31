@@ -1,4 +1,4 @@
-# Copyright 2008 VPAC
+# Copyright 2008-2014 VPAC
 #
 # This file is part of django-pbs.
 #
@@ -16,13 +16,11 @@
 # along with django-pbs  If not, see <http://www.gnu.org/licenses/>.
 
 # Django settings for django_pbs project.
-from os import path as os_path
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-     ('Sam Morrison', 'sam@vpac.org'),
+    ('Sam Morrison', 'sam@vpac.org'),
 )
 
 # A list of all PBS servers to list on the server list page

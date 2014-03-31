@@ -2,7 +2,7 @@ Source: django-pbs
 Section: python
 Priority: optional
 Maintainer: Brian May <bam@debian.org>
-Build-Depends: debhelper (>=7.0.0), python (>= 2.6.6-3), cdbs (>= 0.4.90)
+Build-Depends: debhelper (>=7.0.0), python (>= 2.6.6-3~), python-setuptools
 Homepage: https://github.com/VPAC/django-pbs
 Standards-Version: 3.9.3
 
@@ -10,9 +10,7 @@ Package: django-pbs
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}, python-django (>= 0.96), pbs-python (>= 4.3), torque-client (>=2.4.8)
 Breaks: karaage (<< 3.0.1), karaage-admin (<< 3.0.1), karaage-registration (<< 1.1.0)
-Description: PBS library for Django
- Provides views and templates for displaying information 
- from a PBS server.
- pbs_python is required and also the torque libs.
- It will show the list of jobs on a server and also 
- information about particular jobs.
+Description: PBS information
+ Provides views for displaying information from a PBS server.  pbs_python is
+ required and also the torque libs.  It will show the list of jobs on a server
+ and also information about particular jobs.

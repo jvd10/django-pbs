@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright 2008 VPAC
+# Copyright 2008-2014 VPAC
 #
 # This file is part of django-pbs.
 #
