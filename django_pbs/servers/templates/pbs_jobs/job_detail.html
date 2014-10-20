@@ -16,7 +16,7 @@
 
 
 {% block content %}
-{% load filters %}
+{% load %}
 <div id="content-main">
 	<div class="module">
    	<h2>Servers</h2>
@@ -30,7 +30,7 @@
    		<tr><td>CPU Time:</td><td>{{ job.resources_used_cput }}</td></tr>
    		<tr><td>Queue:</td><td><a href="{% url "pbs_queue_detail" job.server.name job.queue %}">{{ job.queue }}</a></td></tr>
    		<tr><td>Start time:</td><td>{{ job.start }}</td></tr>
-   		<tr><td>Remaining:</td><td>{{ job.remaining|timeformat }}</td></tr>
+   		<tr><td>Remaining:</td><td>{{ job.remaining|time }}</td></tr>
    		<tr><td>Est. walltime:</td><td>{{ job.est_walltime }}</td></tr>
    		<tr><td>Act. walltime:</td><td>{{ job.act_walltime }}</td></tr>
    		<tr><td>Mem used:</td><td>{{ job.resources_used_mem }}</td></tr>

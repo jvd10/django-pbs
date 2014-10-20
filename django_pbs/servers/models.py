@@ -192,4 +192,5 @@ class Node:
         
 
 
-        
+class RelationList(list):
+    pass 

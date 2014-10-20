@@ -18,7 +18,7 @@
 from django.db import models
 import datetime
 from decimal import Decimal
-
+import json
 
 def get_in_seconds(time):
     """
@@ -66,7 +66,11 @@ class Job(object):
                 for i,j in v.items():
                     setattr(self, k + '_' + i, j[0])
             else:
-                setattr(self, k, v[0]) 
+                try:
+                    setattr(self, k, v[0])
+                except KeyError as e:
+                    print(k,v)
+                    setattr(self, k, json.dumps(dict(v)))
 
         self.server = server
         self.username = self.Job_Owner.split('@')[0]
@@ -82,8 +86,13 @@ class Job(object):
             self.state = state_map[self.job_state]
         except:
             self.state = self.job_state
+        
+        try:
+            self.est_walltime = self.Resource_List_walltime
+        except AttributeError as e:
+            print('Walltime Estimate Here!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+            self.est_walltime = '96:0:0'
 
-        self.est_walltime = self.Resource_List_walltime
         try:
             self.count = self.Resource_List_nodes
         except:

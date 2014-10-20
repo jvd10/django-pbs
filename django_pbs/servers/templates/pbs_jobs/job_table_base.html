@@ -1,5 +1,5 @@
 {% load url from future %}
-{% load filters %}
+{% load %}
 <table cellspacing="0">
 	<thead>
 		<tr>
@@ -36,12 +36,12 @@
 	   		{% if running %}
 	   			<td>{{ j.cpus_used }}</td>
 	   			<td class="right">{{ j.act_walltime }}</td>  		
-	   			<td class="right">{{ j.remaining|timeformat }}</td>
+	   			<td class="right">{{ j.remaining|time }}</td>
 	   			<td class="barwidth"><img src="{{ STATIC_URL }}img/bar.gif" height="10" width="{% widthratio j.running_time j.walltime 100 %}" /></td>
 	   			<td>{{ j.percent_remaining|floatformat }}%</td>
 	   		{% else %}
 	   			<td>{{ j.count }}</td>
-	   			<td class="right">{{ j.waiting|timeformat }}</td>
+	   			<td class="right">{{ j.waiting|time }}</td>
 	   		{% endif %}
 	   	</tr>
 	   {% endfor %}

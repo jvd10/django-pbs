@@ -22,7 +22,7 @@ from django_pbs.servers.models import Server, Queue
 
 
 
-def user_detail(request, username):
+def user_detail(request, username, xml=False):
 
     job_list = []
 
